@@ -143,7 +143,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
 
     private fun isEmailValid(email: String): Boolean {
         //TODO: Replace this with your own logic
-        return email.contains("@")
+        return email.length > 0
     }
 
     private fun isPasswordValid(password: String): Boolean {
@@ -258,12 +258,13 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
                         // Account exists, return true if the password matches.
                         it[1] == mPassword
                     }
-                    ?: true
+                    ?: false
         }
 
         override fun onPostExecute(success: Boolean?) {
             mAuthTask = null
             showProgress(false)
+            println(success)
 
             if (success!!) {
                 println("finished")
@@ -294,6 +295,6 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
          * A dummy authentication store containing known user names and passwords.
          * TODO: remove after connecting to a real authentication system.
          */
-        private val DUMMY_CREDENTIALS = arrayOf("a@a:a", "bar@example.com:world")
+        private val DUMMY_CREDENTIALS = arrayOf("a:a")
     }
 }

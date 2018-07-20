@@ -3,6 +3,7 @@ package com.twytr.twytr
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_scrolling.*
 
 class ScrollingActivity : AppCompatActivity() {
@@ -15,7 +16,6 @@ class ScrollingActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        var strUser: String = intent.getStringExtra("Username")
-        println(strUser)
+        setTitle("Hi %s!".format(intent.getStringExtra("Username")));
     }
 }
