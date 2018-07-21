@@ -8,13 +8,13 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_scrolling.*
 
-class ScrollingActivity : AppCompatActivity() {
+class ScrollingActivity3 : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_me -> {
                 println("first")
-                val intent = Intent(this@ScrollingActivity,ScrollingActivity::class.java);
+                val intent = Intent(this@ScrollingActivity3,ScrollingActivity::class.java);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)
 
@@ -22,14 +22,14 @@ class ScrollingActivity : AppCompatActivity() {
             }
             R.id.navigation_insights -> {
                 println("second")
-                val intent = Intent(this@ScrollingActivity,ScrollingActivity2::class.java);
+                val intent = Intent(this@ScrollingActivity3,ScrollingActivity2::class.java);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_searchs -> {
                 println("third")
-                val intent = Intent(this@ScrollingActivity,ScrollingActivity3::class.java);
+                val intent = Intent(this@ScrollingActivity3,ScrollingActivity3::class.java);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
@@ -46,7 +46,7 @@ class ScrollingActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        setTitle("Hi %s!".format(intent.getStringExtra("Username")));
+        setTitle("Search");
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 }
