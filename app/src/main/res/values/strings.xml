@@ -108,4 +108,6 @@
     <string name="title_me">Me</string>
     <string name="title_insights">Insights</string>
     <string name="title_search">Search</string>
+    <string name="post_hint">Enter advice:</string>
+    <string name="post_button">Post</string>
 </resources>

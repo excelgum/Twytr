@@ -43,8 +43,13 @@ class ScrollingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_scrolling)
         setSupportActionBar(toolbar)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            run {
+                println("reached")
+                val intent = Intent(this@ScrollingActivity,PostActivity::class.java);
+                startActivity(intent)
+            }
+            //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            //.setAction("Action", null).show()
         }
         setTitle("Hi %s!".format(intent.getStringExtra("Username")));
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)

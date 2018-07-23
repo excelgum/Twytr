@@ -35,6 +35,7 @@
             android:name=".ScrollingActivity3"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PostActivity"></activity>
     </application>
 
 </manifest>
