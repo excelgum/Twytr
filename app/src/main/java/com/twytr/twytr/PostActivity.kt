@@ -4,7 +4,6 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_post.*
-import kotlinx.android.synthetic.main.activity_scrolling.*
 
 class PostActivity : AppCompatActivity() {
 
@@ -14,7 +13,7 @@ class PostActivity : AppCompatActivity() {
         button.setOnClickListener { view ->
             run {
                 println("reached2")
-                val intent = Intent(this@PostActivity,ScrollingActivity::class.java);
+                val intent = Intent(this@PostActivity,HomeActivity::class.java);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)
             }

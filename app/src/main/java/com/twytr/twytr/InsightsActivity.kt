@@ -5,48 +5,42 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
-import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_scrolling.*
 
-class ScrollingActivity3 : AppCompatActivity() {
+class InsightsActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigation_me -> {
-                println("first")
-                val intent = Intent(this@ScrollingActivity3,ScrollingActivity::class.java);
+            R.id.navigation_home -> {
+                val intent = Intent(this@InsightsActivity,HomeActivity::class.java)
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                startActivity(intent)
-
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_insights -> {
-                println("second")
-                val intent = Intent(this@ScrollingActivity3,ScrollingActivity2::class.java);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                startActivity(intent)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivityForResult(intent, 0);
+                overridePendingTransition(0,0);
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_searchs -> {
-                println("third")
-                val intent = Intent(this@ScrollingActivity3,ScrollingActivity3::class.java);
+                val intent = Intent(this@InsightsActivity,SearchActivity::class.java)
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                startActivity(intent)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivityForResult(intent, 0);
+                overridePendingTransition(0,0);
                 return@OnNavigationItemSelectedListener true
             }
         }
         false
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scrolling)
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.navigation) as BottomNavigationView
+        bottomNavigationView.selectedItemId = R.id.navigation_insights
         setSupportActionBar(toolbar)
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        setTitle("Search");
+        setTitle("Insights");
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 }

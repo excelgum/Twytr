@@ -267,7 +267,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             println(success)
 
             if (success!!) {
-                val intent = Intent(this@LoginActivity,ScrollingActivity::class.java);
+                val intent = Intent(this@LoginActivity,HomeActivity::class.java);
                 intent.putExtra("Username", mEmail)
                 startActivity(intent)
                 finish()
