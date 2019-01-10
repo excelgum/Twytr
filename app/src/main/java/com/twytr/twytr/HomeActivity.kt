@@ -5,8 +5,17 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_scrolling.*
+import android.graphics.Typeface
+import android.view.View
+import android.widget.Button
+import android.widget.ListView
+import bett.com.kotlinlistview.adapters.UserListAdapter
+
 
 class HomeActivity : AppCompatActivity() {
+
+    var listView: ListView? = null
+    var adapter: UserListAdapter? = null
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -39,7 +48,6 @@ class HomeActivity : AppCompatActivity() {
 
         fab.setOnClickListener { view ->
             run {
-                println("reached")
                 val intent = Intent(this@HomeActivity,PostActivity::class.java);
                 startActivity(intent)
             }
@@ -51,5 +59,27 @@ class HomeActivity : AppCompatActivity() {
         //setTitle("Hi %s!".format(intent.getStringExtra("Username")));
         setTitle("Hi %s!".format("Admin"))
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+        //val font = Typeface.createFromAsset(assets, "fonts/fontawesome-webfont.ttf")
+        //val awesomeButton = findViewById<View>(R.id.awesome_button) as Button
+        //awesomeButton.setTypeface(font)
+        //awesomeButton.setText("\uf0e5")
+
+        listView = findViewById<ListView>(R.id.listView)
+        adapter = UserListAdapter(this, generateData())
+
+        listView?.adapter = adapter
+        adapter?.notifyDataSetChanged()
+    }
+
+    fun generateData(): ArrayList<UserDto> {
+        var result = ArrayList<UserDto>()
+
+        for (i in 0..20) {
+            var user: UserDto = UserDto("Bett", "Awesome work ;)")
+            result.add(user)
+        }
+
+        return result
     }
 }

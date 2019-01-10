@@ -13,6 +13,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="bell">&#xf0f3;</string>
+    <string name="icon_heart">&#x0e5;</string>
     <string name="title_activity_scrolling">Hi</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
