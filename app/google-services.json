@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "774429508122",
+    "firebase_url": "https://twytr-8cd3d.firebaseio.com",
+    "project_id": "twytr-8cd3d",
+    "storage_bucket": "twytr-8cd3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774429508122:android:1325a9fa9253f0a6",
+        "android_client_info": {
+          "package_name": "com.twytr.twytr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774429508122-ja6r8dkgnnlk83d9k5j3589mp62cp19i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twytr.twytr",
+            "certificate_hash": "d3a5872eabad7bfeed6616676fa54b489d84d54a"
+          }
+        },
+        {
+          "client_id": "774429508122-virnkj0k2i2jlsarg0kuocjst4j8m0qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXI5MPrbIAvRVrk7KQE9tfiSyrqnGY5hY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774429508122-nq24125froqe6m0pj2681b2kf0e725gh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

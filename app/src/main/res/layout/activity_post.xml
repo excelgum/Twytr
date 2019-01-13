@@ -18,6 +18,7 @@
         tools:layout_editor_absoluteX="8dp">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/edittext"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/post_hint" />

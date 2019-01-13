@@ -14,7 +14,7 @@ import com.twytr.twytr.UserDto
 /**
  * Created by bett on 8/21/17.
  */
-class UserListAdapter(private var activity: Activity, private var items: ArrayList<UserDto>): BaseAdapter() {
+class UserListAdapter(private var activity: Activity, private var items: MutableList<UserDto>): BaseAdapter() {
 //    var items = ArrayList<UserDto>()
 //    var activity: Activity? = null
 
