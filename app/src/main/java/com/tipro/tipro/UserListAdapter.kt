@@ -1,5 +1,3 @@
-package bett.com.kotlinlistview.adapters
-
 import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,13 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import com.twytr.twytr.R
-import com.twytr.twytr.UserDto
+import com.tipro.tipro.R
+import com.tipro.tipro.UserDto
 
-
-/**
- * Created by bett on 8/21/17.
- */
 class UserListAdapter(private var activity: Activity, private var items: MutableList<UserDto>): BaseAdapter() {
 //    var items = ArrayList<UserDto>()
 //    var activity: Activity? = null
@@ -37,7 +31,7 @@ class UserListAdapter(private var activity: Activity, private var items: Mutable
         val view: View?
         val viewHolder: ViewHolder
         if (convertView == null) {
-            val inflater = activity?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val inflater = activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             view = inflater.inflate(R.layout.user_list_row, null)
             viewHolder = ViewHolder(view)
             view?.tag = viewHolder
@@ -64,6 +58,8 @@ class UserListAdapter(private var activity: Activity, private var items: Mutable
     override fun getCount(): Int {
         return items.size
     }
+
+
 
 
 }

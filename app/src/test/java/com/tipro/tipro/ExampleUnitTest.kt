@@ -1,4 +1,4 @@
-package com.twytr.twytr
+package com.tipro.tipro
 
 import org.junit.Test
 

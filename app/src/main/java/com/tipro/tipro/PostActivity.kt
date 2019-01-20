@@ -1,4 +1,4 @@
-package com.twytr.twytr
+package com.tipro.tipro
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -25,11 +25,11 @@ class PostActivity : AppCompatActivity() {
                 val mEdit = findViewById<TextInputEditText>(R.id.edittext)
                 val key = myRef.push().key.toString()
                 //myRef.setValue(mEdit.getText().toString())
-                val msg = Message("admin", mEdit.getText().toString(), key)
+                val msg = Message("admin", mEdit.text.toString(), key)
                 myRef.child(key).setValue(msg)
 
-                val intent = Intent(this@PostActivity,HomeActivity::class.java);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                val intent = Intent(this@PostActivity, HomeActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
             }
             //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

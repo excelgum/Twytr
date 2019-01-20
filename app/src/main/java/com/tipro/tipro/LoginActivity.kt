@@ -1,4 +1,4 @@
-package com.twytr.twytr
+package com.tipro.tipro
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -267,7 +267,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
             println(success)
 
             if (success!!) {
-                val intent = Intent(this@LoginActivity,HomeActivity::class.java);
+                val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                 intent.putExtra("Username", mEmail)
                 startActivity(intent)
                 finish()
