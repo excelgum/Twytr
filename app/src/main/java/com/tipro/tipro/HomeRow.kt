@@ -1,5 +1,5 @@
 package com.tipro.tipro
-class UserDto {
+class HomeRow {
     var name: String = ""
     var comment: String = ""
 

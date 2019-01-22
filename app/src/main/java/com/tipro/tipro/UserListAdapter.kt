@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.tipro.tipro.R
-import com.tipro.tipro.UserDto
+import com.tipro.tipro.HomeRow
 
-class UserListAdapter(private var activity: Activity, private var items: MutableList<UserDto>): BaseAdapter() {
-//    var items = ArrayList<UserDto>()
+class UserListAdapter(private var activity: Activity, private var items: MutableList<HomeRow>): BaseAdapter() {
+//    var items = ArrayList<HomeRow>()
 //    var activity: Activity? = null
 
 //    init {
@@ -47,7 +47,7 @@ class UserListAdapter(private var activity: Activity, private var items: Mutable
         return view as View
     }
 
-    override fun getItem(i: Int): UserDto {
+    override fun getItem(i: Int): HomeRow {
         return items[i]
     }
 
