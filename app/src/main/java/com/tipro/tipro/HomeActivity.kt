@@ -82,7 +82,6 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
-
         FirebaseDatabase.getInstance().getReference("admin").orderByKey().addListenerForSingleValueEvent(itemListener)
 
     }
